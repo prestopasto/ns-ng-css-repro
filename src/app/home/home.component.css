@@ -1,0 +1,24 @@
+Label {
+  margin-bottom: 8;
+  padding: 8;
+}
+
+.layout {
+  --dynamic-color: gray;
+  --static-color: orange;
+}
+
+.static-css {
+  background-color: lightblue;
+}
+
+.static-css-property {
+  background-color: var(--static-color);
+}
+
+.dynamic-css-style {
+}
+
+.dynamic-css-property {
+  background-color: var(--dynamic-color);
+}

@@ -1,0 +1,30 @@
+<ActionBar>
+  <Label text="Home"></Label>
+</ActionBar>
+
+<StackLayout class="p-20 layout">
+  <!-- Normal CSS works -->
+  <Label text="Static CSS" class="static-css"></Label>
+
+  <!-- Using a Custom CSS Property that was defined on the .layout class works -->
+  <Label text="Static CSS Property" class="static-css-property"></Label>
+
+  <!-- Setting a Custom CSS Property inline works --><Label
+    text="Inline Custom Property"
+    style="--color: green; background-color: var(--color)"
+  ></Label>
+
+  <!-- Setting styles dynamically defined in the component .ts file works -->
+  <Label
+    text="Dynamic CSS Style"
+    [style]="dynamicStyle"
+    class="dynamic-css-style"
+  ></Label>
+  <!-- Setting a CSS Custom Property dynamically does NOT work -->
+  <!-- The Gray color is used from the .layout component css, and not recalculated when a new value is set -->
+  <Label
+    text="Dynamic CSS Property"
+    [style]="dynamicProperty"
+    class="dynamic-css-property"
+  ></Label>
+</StackLayout>
